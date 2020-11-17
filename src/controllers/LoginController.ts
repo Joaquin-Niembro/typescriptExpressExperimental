@@ -1,5 +1,5 @@
-import { NextFunction, Request, Response } from 'express';
-import { get, controller, use, bodyValidator, post } from './decorators/';
+import { Request, Response } from 'express';
+import { get, controller, bodyValidator, post } from './decorators/';
 /*interface RequestWithBody extends Request {
 	body: { [key: string]: string | undefined };
 }*/
