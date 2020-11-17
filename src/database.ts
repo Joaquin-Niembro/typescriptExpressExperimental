@@ -1,5 +1,5 @@
 import {createConnection} from 'typeorm'
-import {Task} from './entity/Task'
+import {Task, Person} from './entity/'
 export const con = async ():Promise<void> =>{
     const connection = await createConnection({
         type: 'postgres',
@@ -10,7 +10,7 @@ export const con = async ():Promise<void> =>{
 		database: 'typeorm',
 		synchronize: true,
 		logging: false,
-		entities: [Task]
+		entities: [Task, Person]
     })
     if(connection){
         console.log('db connected')
